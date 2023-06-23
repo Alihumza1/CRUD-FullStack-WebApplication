@@ -1,0 +1,55 @@
+﻿@model WebApplication1.Models.DepartmentModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>New Department</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" size="25" maxlength="25"  required />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Location" class="control-label"></label>
+                <input asp-for="Location" class="form-control" size="25" maxlength="25"  required />
+                <span asp-validation-for="Location" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="container my-3">
+                    <div class="col-md-12 text-center">
+                <input type="submit" value="Submit" onclick="btn()" class="btn btn-primary" />
+                </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+           
+    function btn (){
+        $.ajax({
+
+            url: "/DepartmentController1/Create",
+            method: 'post',
+            
+            success: function (data) {
+                console.data(data);
+            },
+            error: function (err) {
+                console.error(err);
+            },
+        })
+</script>

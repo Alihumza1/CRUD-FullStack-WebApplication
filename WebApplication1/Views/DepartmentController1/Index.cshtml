@@ -1,0 +1,54 @@
+﻿@model List<WebApplication1.Models.DepartmentModel>
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="text-right">
+    <a href="@Url.Action("Create", "DepartmentController1")" class="btn btn-primary ">Add Department</a>
+</div>
+<br />
+<div class="container-sm border">
+    <h1> Department Record</h1>
+    <table id="example1" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                
+                <th>Department Name</th>
+                <th>Department Location</th>
+                <th>Actions</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+           @* @foreach (var e in Model)
+            {
+                <tr>
+                   
+                    <td>@e.Name</td>
+                    <td>@e.Location</td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = e.Depid }) |
+                        @Html.ActionLink("Details", "Details", new { id = e.Depid }) |
+                        @Html.ActionLink("Delete", "Delete",new { id= e.Depid})
+                    </td>
+                </tr>
+            }*@
+        </tbody>
+    </table>
+
+</div>
+
+<script>
+    //$('#example1').DataTable()
+   $(document).ready(function(){
+ LoadListing();
+   });
+   function LoadListing(){
+       $('#example').DataTable({
+           "ajax":{
+               "url":"/DepartmentController/GetDepartments"
+           }
+       });
+   }
+
+    
+</script>

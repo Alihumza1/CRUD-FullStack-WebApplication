@@ -1,0 +1,52 @@
+2023-06-22 12:37:34.895 +05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7149/api/Employee - -
+2023-06-22 12:37:34.917 +05:00 [INF] CORS policy execution successful.
+2023-06-22 12:37:34.919 +05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7149/api/Employee - - - 204 - - 23.5037ms
+2023-06-22 12:37:34.929 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7149/api/Employee application/json 905
+2023-06-22 12:37:34.932 +05:00 [INF] CORS policy execution successful.
+2023-06-22 12:37:34.935 +05:00 [INF] Executing endpoint 'Web_Api.Controllers.EmployeeController.GetEmployee (Web Api)'
+2023-06-22 12:37:34.941 +05:00 [INF] Route matched with {action = "GetEmployee", controller = "Employee"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetEmployee(Web_Api.Models.DataTablesParameters) on controller Web_Api.Controllers.EmployeeController (Web Api).
+2023-06-22 12:37:34.950 +05:00 [INF] Entity Framework Core 6.0.0 initialized 'DbContextcs' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+2023-06-22 12:37:34.958 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-06-22 12:37:35.010 +05:00 [INF] Executed DbCommand (47ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2023-06-22 12:37:35.018 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-06-22 12:37:35.027 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-06-22 12:37:35.034 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-06-22 12:37:35.042 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-06-22 12:37:35.060 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-06-22 12:37:35.065 +05:00 [INF] No migrations were applied. The database is already up to date.
+2023-06-22 12:37:35.079 +05:00 [INF] Executing POST request in EmployeeController
+2023-06-22 12:37:35.085 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Employees] AS [e]
+2023-06-22 12:37:35.098 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[ID], [e].[Age], [e].[CNIC.no], [e].[DepId], [e].[Manager], [e].[Employee Name], [e].[Salary]
+FROM [Employees] AS [e]
+ORDER BY [e].[Employee Name]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2023-06-22 12:37:35.103 +05:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`4[[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[Web_Api.Models.EmployeeModel, Web Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-06-22 12:37:35.110 +05:00 [INF] Executed action Web_Api.Controllers.EmployeeController.GetEmployee (Web Api) in 163.7667ms
+2023-06-22 12:37:35.113 +05:00 [INF] Executed endpoint 'Web_Api.Controllers.EmployeeController.GetEmployee (Web Api)'
+2023-06-22 12:37:35.116 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7149/api/Employee application/json 905 - 200 - application/json;+charset=utf-8 186.6506ms

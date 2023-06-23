@@ -1,0 +1,73 @@
+﻿@model WebApplication1.Models.EmployeeModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Employee Record</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        @using (Html.BeginForm("Edit", "EmployeeController1"))
+        {
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.Name, new { @class = "form-control", type = "text", pattern = "[A-Za-z]+", maxlength = "25" ,required = "required"})
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.DepId)
+                @Html.DropDownListFor(model => model.DepId, new SelectList(ViewBag.Departments, "Depid", "Name"), "Select a Department", new { @class = "form-control", id = "depid", required = "required" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Cnic, htmlAttributes: new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.Cnic, new { @class = "form-control", type = "text", pattern = "[0-9]*", maxlength = "13", required = "required" })
+                @Html.ValidationMessageFor(model => model.Cnic, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Age, htmlAttributes: new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.Age, new { @class = "form-control", type = "number", min = "18", max = "60", required = "required" })
+                @Html.ValidationMessageFor(model => model.Age, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Salary, htmlAttributes: new { @class = "control-label" })
+                @Html.TextBoxFor(model => model.Salary, new { @class = "form-control", type = "number", min = "10000", max = "200000", required = "required" })
+                @Html.ValidationMessageFor(model => model.Salary, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                <div class="container">
+                    <div class="col-md-12 text-center">
+                        <input type="submit" value="Save" class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+
+    function btn() {
+        $.ajax({
+
+            url: "/EmployeeController1/Edit",
+            method: 'post',
+
+            success: function (data) {
+                console.data(data);
+            },
+            error: function (err) {
+                console.error(err);
+            },
+        })
+    }
+</script>

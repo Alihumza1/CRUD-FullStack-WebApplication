@@ -1,0 +1,35 @@
+
+            <div class="container pt-5 ">
+                <div class="mx-auto border p-4 bg-light shadow-lg  " style="width: 400px; ">
+              <h2 ><b>Sign Up</b></h2>
+              <h6>It's quick and easy.</h6>
+              <br>
+              <form [formGroup]="signinForm" (ngSubmit)="Submitted()">
+                <div class="mb-3">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Enter your Email" formControlName="inputEmail" required>
+                    <div class="form-text text-danger" *ngIf="Email.errors?.['required'] && (Email.dirty || Email.touched)">
+                        Email is required
+                    </div>
+                    <div class="form-text text-danger"*ngIf="Email.errors?.['email'] && (Email.dirty || Email.touched)">
+                      Email is invalid
+                  </div>
+                  </div>
+                  <div class="mb-3">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Enter your Password" formControlName="inputPassword"  required>
+                    <div class="form-text text-danger"  *ngIf="PWD.errors?.['required'] && (PWD.dirty || PWD.touched)">
+                      Password is required
+                  </div>
+                  <div class="form-text text-danger" *ngIf="PWD.errors?.['minlength'] || PWD.errors?.['maxlength'] && (Email.dirty || Email.touched)">
+                    Password should be at least  8 and as long as 14 characters long
+                </div>
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" [disabled]="signinForm.invalid" class="btn btn-success">Sign Up</button>
+                  </div>
+                  <hr>
+                <p class="text-center">Have already an account? <a [routerLink]="['']"
+                  class="fw-bold text-body"><u>Log in</u></a></p>
+              </form>
+                </div>
+            </div>
+   
