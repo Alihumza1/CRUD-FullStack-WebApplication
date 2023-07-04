@@ -1,0 +1,12 @@
+C:\Users\Ali Hamza\source\repos\ClassLibrary2\ClassLibrary2\bin\Debug\net7.0\ClassLibrary2.deps.json
+C:\Users\Ali Hamza\source\repos\ClassLibrary2\ClassLibrary2\bin\Debug\net7.0\ClassLibrary2.dll
+C:\Users\Ali Hamza\source\repos\ClassLibrary2\ClassLibrary2\bin\Debug\net7.0\ClassLibrary2.pdb
+C:\Users\Ali Hamza\source\repos\ClassLibrary2\ClassLibrary2\obj\Debug\net7.0\ClassLibrary2.csproj.AssemblyReference.cache
+C:\Users\Ali Hamza\source\repos\ClassLibrary2\ClassLibrary2\obj\Debug\net7.0\ClassLibrary2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ali Hamza\source\repos\ClassLibrary2\ClassLibrary2\obj\Debug\net7.0\ClassLibrary2.AssemblyInfoInputs.cache
+C:\Users\Ali Hamza\source\repos\ClassLibrary2\ClassLibrary2\obj\Debug\net7.0\ClassLibrary2.AssemblyInfo.cs
+C:\Users\Ali Hamza\source\repos\ClassLibrary2\ClassLibrary2\obj\Debug\net7.0\ClassLibrary2.csproj.CoreCompileInputs.cache
+C:\Users\Ali Hamza\source\repos\ClassLibrary2\ClassLibrary2\obj\Debug\net7.0\ClassLibrary2.dll
+C:\Users\Ali Hamza\source\repos\ClassLibrary2\ClassLibrary2\obj\Debug\net7.0\refint\ClassLibrary2.dll
+C:\Users\Ali Hamza\source\repos\ClassLibrary2\ClassLibrary2\obj\Debug\net7.0\ClassLibrary2.pdb
+C:\Users\Ali Hamza\source\repos\ClassLibrary2\ClassLibrary2\obj\Debug\net7.0\ref\ClassLibrary2.dll

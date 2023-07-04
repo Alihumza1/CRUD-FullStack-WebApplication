@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
       ordering: true,
       ajax: (dataTablesParameters: any, callback) => {
         this.http
-          .post('https://localhost:7149/api/Employee', dataTablesParameters)
+          .post('https://cruddapp.azurewebsites.net/api/Employee', dataTablesParameters)
           .subscribe((Response: any) => {
             callback({
               recordsTotal: Response.recordsTotal,

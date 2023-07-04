@@ -8,7 +8,8 @@ import { createDepartment,editDepartment } from '../models/departmentModel';
 })
 export class Service {
   constructor(private http: HttpClient) {}
-  baseServerUrl = 'https://localhost:7149/api/';
+  baseServerUrl = 'https://cruddapp.azurewebsites.net/api/';
+
   updateEmployee(employeeModel: editEmployee): Observable<any[]> {
     return this.http.put<any[]>(this.baseServerUrl + 'Employee/update-Employee-by-id',employeeModel);
   }

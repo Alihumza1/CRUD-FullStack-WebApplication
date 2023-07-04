@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Diagnostics;
 using System.Net;
 using Serilog;
+using Microsoft.AspNetCore.SpaServices.AngularCli;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,6 +31,12 @@ builder.Services.AddControllers();
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
+
+// Add Angular app
+builder.Services.AddSpaStaticFiles(configuration =>
+{
+    configuration.RootPath = "ClientApp/dist"; // Adjust the path to your Angular app's build output
+});
 
 
 builder.Services.AddDbContext<DbContextcs>(options =>
@@ -93,26 +100,26 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
 builder.Services.AddCors(options => options.AddPolicy(name: "WebApi",
     policy =>
     {
-        policy.WithOrigins("https://localhost:44492").AllowAnyMethod().AllowAnyHeader();
+        policy.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
     }));
 
 var app = builder.Build();
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
+//if (app.Environment.IsDevelopment())
+//{
+//    app.UseSwagger();
+//    app.UseSwaggerUI();
 
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
-}
+//    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+//    app.UseHsts();
+//}
 app.UseCors("WebApi");
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
 
 
-
+app.UseDefaultFiles();
 app.UseStaticFiles();
 app.UseRouting();
 
@@ -121,11 +128,21 @@ app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllers();
 });
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller}/{action=Index}/{id?}");
+app.UseSpaStaticFiles();
+app.UseSpa(spa =>
+{
+    spa.Options.SourcePath = "ClientApp"; // Adjust the path to your Angular app's source code
 
-app.MapFallbackToFile("index.html");
+    if (app.Environment.IsDevelopment())
+    {
+        spa.UseAngularCliServer(npmScript: "start");
+    }
+});
+//app.MapControllerRoute(
+//    name: "default",
+//    pattern: "{controller}/{action=Index}/{id?}");
+
+//app.MapFallbackToFile("index.html");
 
 
 app.Run();

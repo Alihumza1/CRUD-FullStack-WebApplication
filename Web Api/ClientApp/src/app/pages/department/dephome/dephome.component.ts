@@ -29,7 +29,7 @@ export class DephomeComponent implements OnInit {
       ordering: true,
       ajax: (dataTablesParameters: any, callback) => {
         this.http
-          .post('https://localhost:7149/api/Department', dataTablesParameters)
+          .post('https://cruddapp.azurewebsites.net/api/Department', dataTablesParameters)
           .subscribe((Response: any) => {
             callback({
               recordsTotal: Response.recordsTotal,

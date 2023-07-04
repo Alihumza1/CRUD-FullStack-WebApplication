@@ -1,0 +1,212 @@
+2023-06-25 12:22:28.594 +05:00 [INF] Entity Framework Core 6.0.5 initialized 'DbContextcs' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2023-06-25 12:22:32.598 +05:00 [INF] Executed DbCommand (294ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-06-25 12:22:41.600 +05:00 [INF] Executed DbCommand (8,978ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2023-06-25 12:22:41.654 +05:00 [INF] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-06-25 12:22:41.876 +05:00 [INF] Executed DbCommand (216ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-06-25 12:22:41.922 +05:00 [INF] Executed DbCommand (44ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-06-25 12:22:42.024 +05:00 [INF] Executed DbCommand (101ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-06-25 12:22:42.228 +05:00 [INF] Executed DbCommand (163ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-06-25 12:22:42.264 +05:00 [INF] No migrations were applied. The database is already up to date.
+2023-06-25 12:22:44.035 +05:00 [INF] Executed DbCommand (1,000ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-06-25 12:22:44.230 +05:00 [INF] Executed DbCommand (182ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Employees] AS [e]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-06-25 12:22:44.406 +05:00 [INF] Executed DbCommand (171ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-06-25 12:23:03.739 +05:00 [INF] Entity Framework Core 6.0.5 initialized 'DbContextcs' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2023-06-25 12:23:04.493 +05:00 [INF] Executed DbCommand (63ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-06-25 12:23:04.768 +05:00 [INF] Executed DbCommand (244ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2023-06-25 12:23:04.794 +05:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-06-25 12:23:04.808 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-06-25 12:23:04.812 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-06-25 12:23:04.814 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-06-25 12:23:04.912 +05:00 [INF] Executed DbCommand (63ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-06-25 12:23:04.943 +05:00 [INF] No migrations were applied. The database is already up to date.
+2023-06-25 12:23:05.716 +05:00 [INF] Executed DbCommand (51ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-06-25 12:23:05.746 +05:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Employees] AS [e]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-06-25 12:23:05.806 +05:00 [INF] Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-06-25 12:23:53.495 +05:00 [INF] Entity Framework Core 6.0.5 initialized 'DbContextcs' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2023-06-25 12:23:54.243 +05:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-06-25 12:23:54.354 +05:00 [INF] Executed DbCommand (82ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2023-06-25 12:23:54.387 +05:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-06-25 12:23:54.399 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-06-25 12:23:54.401 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-06-25 12:23:54.403 +05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-06-25 12:23:54.446 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-06-25 12:23:54.482 +05:00 [INF] No migrations were applied. The database is already up to date.
+2023-06-25 12:23:55.148 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-06-25 12:23:55.167 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Employees] AS [e]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-06-25 12:23:55.177 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-06-25 13:46:01.593 +05:00 [INF] Entity Framework Core 6.0.5 initialized 'DbContextcs' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: None
+2023-06-25 13:46:02.949 +05:00 [INF] Executed DbCommand (49ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-06-25 13:46:03.814 +05:00 [INF] Executed DbCommand (796ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2023-06-25 13:46:03.859 +05:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-06-25 13:46:03.893 +05:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-06-25 13:46:03.903 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-06-25 13:46:03.916 +05:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2023-06-25 13:46:03.998 +05:00 [INF] Executed DbCommand (47ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2023-06-25 13:46:04.034 +05:00 [INF] No migrations were applied. The database is already up to date.
+2023-06-25 13:46:04.724 +05:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-06-25 13:46:04.795 +05:00 [INF] Executed DbCommand (59ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Employees] AS [e]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-06-25 13:46:04.854 +05:00 [INF] Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END

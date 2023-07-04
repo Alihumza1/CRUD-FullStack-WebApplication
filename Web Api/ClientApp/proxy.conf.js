@@ -1,7 +1,7 @@
 const { env } = require('process');
 
-const target = env.ASPNETCORE_HTTPS_PORT ? `https://localhost:${env.ASPNETCORE_HTTPS_PORT}` :
-  env.ASPNETCORE_URLS ? env.ASPNETCORE_URLS.split(';')[0] : 'http://localhost:13253';
+const target = env.ASPNETCORE_HTTPS_PORT ? `https://cruddapp.azurewebsites.net` :
+  env.ASPNETCORE_URLS ? env.ASPNETCORE_URLS.split(';')[0] : 'http://cruddapp.azurewebsites.net';
 
 const PROXY_CONFIG = [
   {

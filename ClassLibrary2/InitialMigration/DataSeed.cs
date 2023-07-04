@@ -26,7 +26,7 @@ namespace ClassLibrary2.InitialMigration
                 // Seed employee data
                 var employees = new[]
                 {
-                    new Employee { Name = "John Doe", DepId = 7, Manager = "Jane Smith", Cnic = "12345678901234", Age = 30, Salary = 50000},
+                    new Employee { Name = "John Doe", DepId = 1, Manager = "Jane Smith", Cnic = "12345678901234", Age = 30, Salary = 50000},
                 };
                 dbContext.Employees.AddRange(employees);
                 dbContext.SaveChanges();
